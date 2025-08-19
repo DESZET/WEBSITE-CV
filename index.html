@@ -435,7 +435,7 @@
     }
     // set default: dark mode OFF initially (keputusan desain; ubah jika mau default dark)
     // Jika ingin default dark, uncomment baris berikut:
-    // document.documentElement.classList.add('dark');
+    document.documentElement.classList.add('dark');
     updateThemeIcon();
     themeBtn.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
