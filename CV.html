@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Desta Anandhika Rajendra Maheswara</title>
+  <meta name="description" content="CV online Desta Anandhika Rajendra Maheswara – Mahasiswa Informatika Universitas Amikom Yogyakarta" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Print-friendly for CV download */
+    @media print {
+      .no-print { display: none !important; }
+      a[href]::after { content: ""; }
+      html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    /* Simple reveal animation */
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-20 backdrop-blur bg-white/70 dark:bg-zinc-900/60 border-b border-zinc-200/60 dark:border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-lg">Desta<span class="text-indigo-500">.CV</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-indigo-500">Tentang</a>
+        <a href="#skills" class="hover:text-indigo-500">Keahlian</a>
+        <a href="#projects" class="hover:text-indigo-500">Proyek</a>
+        <a href="#education" class="hover:text-indigo-500">Pendidikan</a>
+        <a href="#contact" class="hover:text-indigo-500">Kontak</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeBtn" class="no-print inline-flex items-center gap-2 rounded-2xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 text-xs hover:bg-zinc-100 dark:hover:bg-zinc-800" title="Toggle theme">
+          <span id="themeIcon">🌓</span>
+          <span class="hidden sm:inline">Tema</span>
+        </button>
+        <button onclick="window.print()" class="no-print inline-flex items-center gap-2 rounded-2xl bg-indigo-600 text-white px-3 py-1.5 text-xs hover:bg-indigo-500">Unduh PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1fr,1.2fr] gap-8 items-center py-12 md:py-16">
+      <!-- Photo + quick actions -->
+      <div class="reveal">
+        <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl ring-1 ring-zinc-200/70 dark:ring-zinc-700/80">
+          <!-- Menggunakan gambar permanen desta.jpeg (letakkan file desta.jpeg di folder yang sama dengan HTML) -->
+          <img id="profileImg" class="w-full h-full object-cover" alt="Foto Profil" src="uploads/desta.jpeg" />
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
+          <a href="#contact" class="inline-flex items-center gap-1 rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">📧 Email</a>
+          <a target="_blank" href="https://github.com/DESZET" class="inline-flex items-center gap-1 rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">💻 GitHub</a>
+          
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-wider font-medium px-2 py-1 rounded-full border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 w-max mb-3">Mahasiswa Informatika • Universitas Amikom Yogyakarta</div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Desta Anandhika Rajendra Maheswara
+        </h1>
+        <p class="mt-3 text-zinc-600 dark:text-zinc-300 max-w-2xl">
+          Halo, saya Desta, mahasiswa semester 5 dari Universitas Amikom Yogyakarta yang memiliki minat besar di bidang pengembangan perangkat lunak, khususnya di web development dan aplikasi desktop. Saya aktif mengeksplorasi serta membangun berbagai jenis aplikasi, mulai dari website front-end/back-end hingga aplikasi desktop menggunakan berbagai bahasa dan framework pemrograman.
+        </p>
+        <div class="mt-5 grid grid-cols-2 sm:flex gap-3 text-sm">
+          <a href="#projects" class="inline-flex items-center justify-center rounded-2xl bg-indigo-600 text-white px-4 py-2 hover:bg-indigo-500">Lihat Proyek</a>
+          <a href="#skills" class="inline-flex items-center justify-center rounded-2xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">Keahlian</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12 md:py-16 border-t border-zinc-200/60 dark:border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div class="reveal">
+        <h2 class="text-xl sm:text-2xl font-semibold">Tentang Saya</h2>
+        <p class="mt-3 text-zinc-600 dark:text-zinc-300">Saya terbiasa mengembangkan aplikasi menggunakan:</p>
+        <ul class="mt-3 space-y-1 text-zinc-700 dark:text-zinc-300">
+          <li><span class="font-medium">Bahasa Pemrograman:</span> C++, C#, PHP, JavaScript</li>
+          <li><span class="font-medium">Framework & Library:</span> Laravel, Tailwind CSS, HTML/CSS</li>
+          <li><span class="font-medium">Database:</span> MySQL</li>
+          <li><span class="font-medium">Tools Lainnya:</span> Git, VS Code, XAMPP, dan berbagai tools pendukung pengembangan web & aplikasi.</li>
+        </ul>
+        <p class="mt-3 text-zinc-600 dark:text-zinc-300">Saya menikmati proses merancang dan mengimplementasikan solusi digital yang efisien & fungsional, serta antusias mempelajari teknologi baru dan berkontribusi dalam proyek kolaboratif.</p>
+      </div>
+      <div class="reveal">
+        <div class="grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl p-4 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm">
+            <div class="text-3xl">💻</div>
+            <div class="mt-2 text-sm text-zinc-500">Fokus</div>
+            <div class="font-semibold">Web & Desktop App</div>
+          </div>
+          <div class="rounded-2xl p-4 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm">
+            <div class="text-3xl">🧩</div>
+            <div class="mt-2 text-sm text-zinc-500">Stack</div>
+            <div class="font-semibold">Laravel • Tailwind • MySQL</div>
+          </div>
+          <div class="rounded-2xl p-4 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm">
+            <div class="text-3xl">🚀</div>
+            <div class="mt-2 text-sm text-zinc-500">Mindset</div>
+            <div class="font-semibold">Build • Learn • Ship</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 reveal">Keahlian Teknis</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 bg-white dark:bg-zinc-900 reveal">
+          <div class="font-medium mb-3">Bahasa</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">C++</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">C#</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">PHP</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">JavaScript</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 bg-white dark:bg-zinc-900 reveal">
+          <div class="font-medium mb-3">Framework & Library</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">Laravel</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">Tailwind CSS</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">HTML</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">CSS</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 bg-white dark:bg-zinc-900 reveal">
+          <div class="font-medium mb-3">Database & Tools</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">MySQL</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">Git</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">VS Code</span>
+            <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">XAMPP</span>
+              <span class="px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (STATIS, tanpa localStorage / upload / edit) -->
+  <section id="projects" class="py-12 md:py-16 border-y border-zinc-200/60 dark:border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-xl sm:text-2xl font-semibold reveal">Proyek Pilihan</h2>
+        <!-- Tombol tambah dihapus supaya tidak menimbulkan fitur dinamis -->
+      </div>
+
+      <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Project 1 -->
+        <article class="reveal rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[16/10] bg-zinc-100 dark:bg-zinc-800">
+            <!-- Menggunakan gambar permanen bioskop.png -->
+            <img class="w-full h-full object-cover" alt="Sistem Top-Up Game" src="uploads/topup.png"/>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Sistem Top-Up Game</h3>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Platform top-up styled seperti PointTopUp menggunakan HTML, PHP, Tailwind.</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>PHP</span>
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>Tailwind</span>
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>MySQL</span>
+            </div>
+            <div class="mt-4 flex items-center gap-2">
+              <a href="#" target="_blank" class="inline-flex items-center gap-2 text-sm rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Kunjungi</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="reveal rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[16/10] bg-zinc-100 dark:bg-zinc-800">
+            <img class="w-full h-full object-cover" alt="Sporteva" src="uploads/lapangan.png"/>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Aplikasi Reservasi Lapangan</h3>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Sporteva – pemesanan lapangan online dengan notifikasi & verifikasi admin.</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>Figma</span>
+           
+            </div>
+            <div class="mt-4 flex items-center gap-2">
+              <a href="https://www.figma.com/design/3k1VHP0Dixd9XeLBjoK89l/Sporteva?node-id=0-1&t=m1ucriBQSiWgbTD8-1" target="_blank" class="inline-flex items-center gap-2 text-sm rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Kunjungi</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="reveal rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[16/10] bg-zinc-100 dark:bg-zinc-800">
+            <img class="w-full h-full object-cover" alt="Aplikasi Manajemen Tiket bioskop" src="uploads/bioskop.png"/>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Desktop App Inventori</h3>
+            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Aplikasi C# untuk mengelola stok & transaksi sederhana.</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>C#</span>
+              <span class='px-2.5 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800'>.NET</span>
+            </div>
+            <div class="mt-4 flex items-center gap-2">
+              <a href="#" target="_blank" class="inline-flex items-center gap-2 text-sm rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800">Kunjungi</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="mt-4 text-xs text-zinc-500 reveal">Tip: Gambar proyek diambil dari file statis (bioskop.png).</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 items-start">
+      <div class="reveal">
+        <h2 class="text-xl sm:text-2xl font-semibold">Pendidikan</h2>
+        <div class="mt-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 bg-white dark:bg-zinc-900">
+          <div class="font-semibold">Universitas Amikom Yogyakarta</div>
+          <div class="text-sm text-zinc-500">S1 Informatika • Semester 5</div>
+          <div class="text-sm mt-2">Konsentrasi: Pengembangan Perangkat Lunak (Web & Desktop)</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h2 class="text-xl sm:text-2xl font-semibold">Penghargaan & Kegiatan</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-900">Aktif di proyek kolaboratif kampus & komunitas developer.</li>
+          <li class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-900">Eksplorasi full-stack Laravel, REST API, dan arsitektur MVC.</li>
+          <li class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-900">Kontribusi pada aplikasi desktop sederhana (C# / .NET).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-xl sm:text-2xl font-semibold reveal">Kontak</h2>
+      <p class="mt-3 text-zinc-600 dark:text-zinc-300 reveal">Terbuka untuk magang, freelance, atau kolaborasi proyek. Silakan hubungi saya melalui formulir di bawah ini.</p>
+      <form class="mt-6 grid gap-3">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input type="text" placeholder="Nama" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2" required>
+          <input type="email" placeholder="Email" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2" required>
+        </div>
+        <input type="text" placeholder="Subjek" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2" required>
+        <textarea placeholder="Pesan" rows="5" class="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2" required></textarea>
+        <button type="submit" class="no-print inline-flex justify-center rounded-2xl bg-indigo-600 text-white px-4 py-2 text-sm hover:bg-indigo-500">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-xs text-zinc-500">© <span id="y"></span> Desta Anandhika Rajendra Maheswara • Dibuat dengan Tailwind</footer>
+
+  <script>
+    // Render year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple theme toggle (TIDAK menggunakan localStorage — bersifat temporary)
+    const themeBtn = document.getElementById('themeBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    // set initial icon based on current document class
+    function updateThemeIcon() {
+      themeIcon.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '☀️';
+    }
+    // set default: dark mode OFF initially (keputusan desain; ubah jika mau default dark)
+    // Jika ingin default dark, uncomment baris berikut:
+    // document.documentElement.classList.add('dark');
+    updateThemeIcon();
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      updateThemeIcon();
+    });
+
+    // Reveal on scroll (tetap dipertahankan)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // NOTE:
+    // - Semua fitur yang berkaitan dengan localStorage, upload gambar via browser, dan edit project dihapus.
+    // - Untuk mengganti foto profil atau gambar project, edit tag <img src="..."> di file HTML ini dan letakkan file gambar di folder project.
+  </script>
+</body>
+</html>
