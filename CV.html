@@ -39,39 +39,76 @@
       </div>
     </div>
   </header>
+<!-- Hero -->
+<section id="home" class="relative">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1fr,1.5fr] gap-8 items-center py-12 md:py-16">
 
-  <!-- Hero -->
-  <section id="home" class="relative">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1fr,1.2fr] gap-8 items-center py-12 md:py-16">
-      <!-- Photo + quick actions -->
-      <div class="reveal">
-        <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl ring-1 ring-zinc-200/70 dark:ring-zinc-700/80">
-          <!-- Menggunakan gambar permanen desta.jpeg (letakkan file desta.jpeg di folder yang sama dengan HTML) -->
-          <img id="profileImg" class="w-full h-full object-cover" alt="Foto Profil" src="uploads/desta.jpeg" />
-        </div>
-        <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
-          <a href="#contact" class="inline-flex items-center gap-1 rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">📧 Email</a>
-          <a target="_blank" href="https://github.com/DESZET" class="inline-flex items-center gap-1 rounded-xl border border-zinc-300 dark:border-zinc-700 px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">💻 GitHub</a>
-          
-        </div>
+    <!-- Kolom kiri: Foto + Quick Actions -->
+    <div class="reveal">
+      <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl ring-1 ring-zinc-200/70 dark:ring-zinc-700/80">
+        <img id="profileImg" class="w-full h-full object-cover" alt="Foto Profil" src="uploads/desta.jpeg" />
       </div>
+    
+      <!-- Quick Actions -->
+      <div class="mt-4 flex flex-col gap-2 text-xs">
+        <!-- Baris pertama -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Email -->
+          <a href="#contact"
+            class="inline-flex items-center gap-1 rounded-xl border px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+            📧 Email
+          </a>
 
-      <!-- Intro -->
-      <div class="reveal">
-        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-wider font-medium px-2 py-1 rounded-full border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 w-max mb-3">Mahasiswa Informatika • Universitas Amikom Yogyakarta</div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-          Desta Anandhika Rajendra Maheswara
-        </h1>
-        <p class="mt-3 text-zinc-600 dark:text-zinc-300 max-w-2xl">
-          Halo, saya Desta, mahasiswa semester 5 dari Universitas Amikom Yogyakarta yang memiliki minat besar di bidang pengembangan perangkat lunak, khususnya di web development dan aplikasi desktop. Saya aktif mengeksplorasi serta membangun berbagai jenis aplikasi, mulai dari website front-end/back-end hingga aplikasi desktop menggunakan berbagai bahasa dan framework pemrograman.
-        </p>
-        <div class="mt-5 grid grid-cols-2 sm:flex gap-3 text-sm">
-          <a href="#projects" class="inline-flex items-center justify-center rounded-2xl bg-indigo-600 text-white px-4 py-2 hover:bg-indigo-500">Lihat Proyek</a>
-          <a href="#skills" class="inline-flex items-center justify-center rounded-2xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">Keahlian</a>
+          <!-- GitHub -->
+          <a target="_blank" href="https://github.com/DESZET"
+            class="inline-flex items-center gap-1 rounded-xl border px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+            💻 GitHub
+          </a>
+        </div>
+
+        <!-- Baris kedua -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Instagram -->
+          <a target="_blank" href="https://instagram.com/deesszz_"
+            class="inline-flex items-center gap-1 rounded-xl border px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+            📸 Instagram
+          </a>
+
+          <!-- WhatsApp -->
+          <a target="_blank" href="https://wa.me/6285329077987"
+            class="inline-flex items-center gap-1 rounded-xl border px-3 py-1 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+            📱 WhatsApp
+          </a>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Kolom kanan: Intro -->
+    <div class="reveal">
+      <div
+        class="inline-flex items-center gap-2 text-[11px] uppercase tracking-wider font-medium px-2 py-1 rounded-full border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 w-max mb-3">
+        Mahasiswa Informatika • Universitas Amikom Yogyakarta
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+        Desta Anandhika Rajendra Maheswara
+      </h1>
+      <p class="mt-3 text-zinc-600 dark:text-zinc-300 max-w-2xl">
+        Halo, saya Desta, mahasiswa semester 5 dari Universitas Amikom Yogyakarta yang memiliki minat besar di bidang
+        pengembangan perangkat lunak, khususnya di web development dan aplikasi desktop. Saya aktif mengeksplorasi serta
+        membangun berbagai jenis aplikasi, mulai dari website front-end/back-end hingga aplikasi desktop menggunakan berbagai
+        bahasa dan framework pemrograman.
+      </p>
+      <div class="mt-5 grid grid-cols-2 sm:flex gap-3 text-sm">
+        <a href="#projects"
+          class="inline-flex items-center justify-center rounded-2xl bg-indigo-600 text-white px-4 py-2 hover:bg-indigo-500">Lihat
+          Proyek</a>
+        <a href="#skills"
+          class="inline-flex items-center justify-center rounded-2xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">Keahlian</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- About -->
   <section id="about" class="py-12 md:py-16 border-t border-zinc-200/60 dark:border-zinc-800/60">
