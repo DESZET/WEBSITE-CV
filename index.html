@@ -41,34 +41,49 @@
     .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.revealed { opacity: 1; transform: translateY(0); }
 
-/* Typing animation */
-#typingName {
+#typingContainer {
+  display: inline-block;
+}
+
+/* BARIS 1: mengetik dulu */
+#line1 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #4f46e5; /* cursor */
+  border-right: 3px solid #4f46e5;
   width: 0;
-  opacity: 1;
+  animation: typing1 3s steps(16, end) forwards,
+             blink 0.7s step-end infinite;
 }
 
-/* Animasi ketik–hapus bolak-balik */
-#typingName.animate {
-  animation: 
-    typing 3s steps(30, end) infinite alternate,
-    blink 0.7s step-end infinite;
+/* BARIS 2: mulai setelah baris 1 selesai */
+#line2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid #4f46e5;
+  animation: typing2 3s steps(18, end) forwards;
+  animation-delay: 3.1s; /* tunggu baris 1 selesai */
+  opacity: 0;
 }
 
-/* Ketik & hapus */
-@keyframes typing {
+@keyframes typing1 {
   from { width: 0ch; }
-  to { width: 20ch; } /* sesuaikan jumlah karakter */
+  to { width: 16ch; } /* jumlah karakter “Desta Anandhika” */
 }
 
-/* Cursor berkedip */
+@keyframes typing2 {
+  0% { width: 0ch; opacity: 1; }
+  100% { width: 18ch; opacity: 1; } /* jumlah karakter “Rajendra Maheswara” */
+}
+
+/* cursor berkedip */
 @keyframes blink {
-  from, to { border-color: transparent }
+  0%, 100% { border-color: transparent; }
   50% { border-color: #4f46e5; }
 }
+
 
   </style>
 </head>
@@ -149,19 +164,14 @@
         </div>
       </div>
 
-      <!-- Right column -->
-      <div class="reveal">
-        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-wider font-medium px-2 py-1 rounded-full border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 w-max mb-3" data-key="hero_badge">
-          Mahasiswa Informatika • Universitas Amikom Yogyakarta
-        </div>
+   <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+  <div id="typingContainer">
+    <span id="line1">Desta Anandhika</span>
+    <br>
+    <span id="line2">Rajendra Maheswara</span>
+  </div>
+</h1>
 
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-      <div id="typingName">
-        <span class="line1">Desta Anandhika</span>
-        <br>
-        <span class="line2">Rajendra Maheswara</span>
-      </div>
-    </h1>
 
         <p data-key="intro_paragraph" class="mt-3 text-zinc-600 dark:text-zinc-300 max-w-2xl">
           Halo, saya Desta, mahasiswa semester 5 dari Universitas Amikom Yogyakarta yang memiliki minat besar di bidang pengembangan perangkat lunak, khususnya di web development dan aplikasi desktop. Saya aktif mengeksplorasi serta membangun berbagai jenis aplikasi, mulai dari website front-end/back-end hingga aplikasi desktop menggunakan berbagai bahasa dan framework pemrograman.
