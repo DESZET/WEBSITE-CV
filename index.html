@@ -102,71 +102,10 @@
   <section id="home" class="relative">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1fr,1.5fr] gap-8 items-center py-12 md:py-16">
       <!-- Left column -->
-      <!-- SUPER 3D MAGNETIC PHOTO -->
-<div id="superCard" class="relative w-44 h-44 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300"
-     style="transform-style: preserve-3d;">
-
-  <!-- Foto -->
-  <img src="uploads/desta.jpeg"
-       id="superImg"
-       class="w-full h-full object-cover rounded-3xl">
-
-  <!-- RGB Glow -->
-  <div id="superGlow"
-       class="absolute inset-0 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 blur-3xl opacity-50"></div>
-  </div>
-
-  <!-- Shockwave -->
-  <div id="superShock"
-       class="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-xl scale-0 opacity-0 pointer-events-none"></div>
-</div>
-
-<script>
-// Elemen
-const card = document.getElementById("superCard");
-const glow = document.getElementById("superGlow");
-const shock = document.getElementById("superShock");
-
-// Magnetic follow
-card.addEventListener("mousemove", (e) => {
-  const r = card.getBoundingClientRect();
-  const x = e.clientX - r.left;
-  const y = e.clientY - r.top;
-
-  const rotateX = ((y / r.height) - 0.5) * 30;
-  const rotateY = ((x / r.width) - 0.5) * -30;
-
-  card.style.transform =
-    `perspective(600px) 
-     rotateX(${rotateX}deg) 
-     rotateY(${rotateY}deg) 
-     scale(1.15)`;
-
-  glow.style.opacity = 1;
-});
-
-// Reset efek
-card.addEventListener("mouseleave", () => {
-  card.style.transform =
-    "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)";
-  glow.style.opacity = 0;
-});
-
-// Shockwave pulse
-card.addEventListener("mouseenter", () => {
-  shock.style.transition = "0s";
-  shock.style.transform = "scale(0)";
-  shock.style.opacity = "0.5";
-
-  setTimeout(() => {
-    shock.style.transition = "transform 0.6s cubic-bezier(.21,1.07,.76,1), opacity 0.6s";
-    shock.style.transform = "scale(2.5)";
-    shock.style.opacity = "0";
-  }, 10);
-});
-</script>
-
+      <div class="reveal">
+        <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl ring-1 ring-zinc-200/70 dark:ring-zinc-700/80 neon-blue">
+          <img id="profileImg" class="w-full h-full object-cover" alt="Foto Profil" src="uploads/desta.jpeg" />
+        </div>
 
         <!-- Quick Actions -->
         <div class="mt-4 flex flex-col gap-2 text-xs">
